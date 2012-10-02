@@ -62,13 +62,26 @@ class DATABASE_CONFIG {
 	public $default = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
+		'host' => 'mysqlsdb.co8hm2var4k9.eu-west-1.rds.amazonaws.com',
+		'login' => 'depm7gmdgeq',
+		'password' => 'xjvc%SlCBwNi',
+		'database' => 'depm7gmdgeq',
+		'prefix' => '',
+		//'encoding' => 'utf8',
+	);
+	
+	/*
+	public $default = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => 'root',
 		'database' => 'mina',
 		'prefix' => '',
 		//'encoding' => 'utf8',
-	);
+	); 
+	 */
 
 	public $test = array(
 		'datasource' => 'Database/Mysql',
