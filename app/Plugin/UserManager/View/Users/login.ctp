@@ -1,1 +1,0 @@
-User's login from Plugin
