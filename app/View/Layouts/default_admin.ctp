@@ -35,12 +35,15 @@
 	?>
 </head>
 <body>
-	<div class="container">
+	<?php echo $this->element('navi_top'); ?>
+	<div class="container-fluid">
 		<div class="row-fluid">
 			<?php 
+				echo $this->element('sidebar_left'); 
 				echo $this->fetch('content'); 
 			?>
 		</div>
+		<?php echo $this->element('footer'); ?>
 	</div><!--/.fluid-container-->
 	    <!-- Le javascript
     ================================================== -->

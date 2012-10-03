@@ -1,5 +1,4 @@
 <?php
-CakePlugin::load('UserManager');
 CakePlugin::load('Facebook');
 
 /**

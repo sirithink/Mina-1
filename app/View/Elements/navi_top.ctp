@@ -9,7 +9,8 @@
           <a class="brand" href="#">LittleOnesOnline</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as Mina,&nbsp;<a href="#" class="navbar-link">Logout</a>
+              Logged in as <?php echo ucfirst($this->Session->read('username')); ?>,&nbsp;
+              <?php echo $this->Html->link('Logout',array('controller'=>'Users','action'=>'logout'),array('class'=>'navbar-link')); ?>
             </p>
             <ul class="nav">
               <li class="active"><a href="#">Categories</a></li>

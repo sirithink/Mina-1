@@ -32,4 +32,26 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+	
+	public $components = array(
+				'Session', 
+				'Auth'=>array(
+					'loginRedirect' => array('controller'=>'Pages', 'action'=>'display'),
+					'logoutRedirect' => array('controller'=>'Users', 'action'=>'login'),
+					'authError' => 'You can not access that page',
+					'authorize' => array('Controller')
+				),
+				'Cookie'
+	);
+	
+	public $helpers = array('Html','Form','Session');
+	public $uses = array('User');
+	
+	public function isAuthorized($user){
+		return $this->Auth->user('id');
+	}
+	
+	public function beforeFilter(){
+		$this->Auth->allow('login','home','logout','view_detail','list_all','register');
+	}
 }
